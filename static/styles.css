@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    height: 100vh; /* Limits body height to the viewport height */
+    overflow: hidden; /* Prevents scroll if not necessary */
+}
+
+/* Background Video */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    filter: blur(5px); 
+    z-index: -1;
+}
+/* Header */
+header {
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px 60px; /* Reduced padding */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.logo-image {
+    width: 40px;
+    height: auto;
+    margin-right: 8px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    gap: 15px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s; /* Smooth transition for link color */
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+/* Main Heading */
+header h1 {
+    margin-top: 50px;
+    font-size: 2.5em;
+    animation: fadeIn 2s; /* Animation for the main heading */
+}
+
+/* Form Title */
+.form-title {
+    text-align: center;
+    margin-top: 80px; /* Pushes title below the navbar */
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 10px; /* Space between title and form */
+}
+
+/* Form Section */
+.form-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px; /* Reduced padding */
+    max-width: 500px;
+    margin: 0 auto; /* Center horizontally */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    animation: slideIn 0.8s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Elements */
+form label {
+    margin: 10px 0 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #0f2682;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Keyframes for Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
